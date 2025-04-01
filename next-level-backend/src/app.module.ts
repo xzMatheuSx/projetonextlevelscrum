@@ -37,11 +37,11 @@ import { VendaProduto } from './venda-produto/entities/venda-produto.entity';
   [
     TypeOrmModule.forRoot({
       type: 'postgres', 
-      host: 'localhost',
+      url: process.env.DATABASE_URL,
       port: 5432,
-      username: 'postgres',
-      password: 'root',
-      database: 'next-level',
+      username: 'banconext_user',
+      password: 'sme9UwYilGM8i5TuUOFwLTq6UBm9Ns8U',
+      database: 'banconext',
       entities: [
         Usuario, Plano, Aluno, PlanoAluno,
         PagamentoAluno, ProdutoTipo, Produto,
