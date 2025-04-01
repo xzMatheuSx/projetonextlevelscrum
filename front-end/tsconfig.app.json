@@ -23,7 +23,7 @@
     "noUncheckedSideEffectImports": true,
 
     /* Paths configuration */
-    "baseUrl": ".",  // A base URL para resolução de módulos
+    "baseUrl": "https://projetonextlevelscrum.onrender.com",  // A base URL para resolução de módulos
     "paths": {
       "@/*": ["./src/*"]  // Alias para o diretório src
     }
