@@ -32,6 +32,8 @@ export type Aluno = {
 export default function DataTableDemo() {
 	const [alunos, setAlunos] = React.useState<Aluno[]>([]);
 	const [isLoading, setIsLoading] = React.useState<boolean>(true);
+	console.log(isLoading);
+
 	const [sorting, setSorting] = React.useState<SortingState>([]);
 	const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
 	const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
@@ -89,7 +91,7 @@ export default function DataTableDemo() {
 		{
 			id: 'actions',
 			enableHiding: false,
-			cell: ({ row }) => (
+			cell: ({  }) => (
 				<DropdownMenu>
 					<DropdownMenuTrigger asChild>
 						<Button variant="ghost" className="h-8 w-8 p-0">
