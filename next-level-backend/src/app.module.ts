@@ -39,10 +39,15 @@ dotenv.config();
   [
     TypeOrmModule.forRoot({
       type: 'postgres', 
-      url: process.env.DATABASE_URL, 
+      host: 'dpg-cvli8pbipnbc73cbd9ag-a.oregon-postgres.render.com',
+      port: 5432,
+      username: 'banconext_user',
+      password: 'sme9UwYilGM8i5TuUOFwLTq6UBm9Ns8U', 
+      database: 'banconext', 
       ssl: {
-        rejectUnauthorized: false,
-      },
+        rejectUnauthorized: false, 
+      }, 
+     
 
        
       entities: [
