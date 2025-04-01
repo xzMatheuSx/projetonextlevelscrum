@@ -30,6 +30,8 @@ import { EquipamentosManutencao } from './equipamentos-manutencao/entities/equip
 import { MovimentoEstoque } from './movimento-estoque/entities/movimento-estoque.entity';
 import { Venda } from './venda/entities/venda.entity';
 import { VendaProduto } from './venda-produto/entities/venda-produto.entity';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 
 @Module({
@@ -37,11 +39,12 @@ import { VendaProduto } from './venda-produto/entities/venda-produto.entity';
   [
     TypeOrmModule.forRoot({
       type: 'postgres', 
-      url: process.env.DATABASE_URL,
-      port: 5432,
-      username: 'banconext_user',
-      password: 'sme9UwYilGM8i5TuUOFwLTq6UBm9Ns8U',
-      database: 'banconext',
+      url: process.env.DATABASE_URL, 
+      ssl: {
+        rejectUnauthorized: false,
+      },
+
+       
       entities: [
         Usuario, Plano, Aluno, PlanoAluno,
         PagamentoAluno, ProdutoTipo, Produto,
