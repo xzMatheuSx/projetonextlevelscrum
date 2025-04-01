@@ -9,7 +9,7 @@
     }
   ],
   "compilerOptions": {
-    "baseUrl": "https://projetonextlevelscrum.onrender.com",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"]
     },
